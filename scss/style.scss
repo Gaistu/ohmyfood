@@ -79,9 +79,42 @@ html {
   padding: 10px;
   margin: 0 750px 90px;
   border-radius: 0.2em;
+  font-family: "caladea";
+  font-weight: bold;
 }
 
 .logo-menu1 {
   width: 50px;
   height: 50px;
+}
+
+.title-menu-first,
+.menu.first p {
+  font-family: "segoe print";
+  font-weight: bold;
+}
+
+.title-menu-second,
+.menu.second p {
+  font-family: "georgia";
+  font-weight: bold;
+}
+
+.title-menu-third {
+  font-family: "MV boli";
+  font-weight: normal;
+}
+
+.menu.third p {
+  font-family: "segoe print";
+  font-weight: normal;
+}
+
+.title-menu-fourth {
+  font-family: "segoe script";
+  font-weight: bold;
+}
+
+.menu.fourth p {
+  font-family: "segoe print";
 }
