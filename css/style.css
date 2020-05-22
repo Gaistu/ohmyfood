@@ -1,112 +1,117 @@
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-hr,
-menu,
-nav,
-section {
-  display: block;
-}
-
-a,
-hr {
-  padding: 0;
-}
-
-abbr,
-address,
-article,
-aside,
-audio,
-b,
-blockquote,
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
 body,
-canvas,
-caption,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
 div,
-dl,
-dt,
-em,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
+span,
+applet,
+object,
+iframe,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-header,
-hgroup,
-html,
-i,
-iframe,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
 img,
 ins,
 kbd,
-label,
-legend,
-li,
-mark,
-menu,
-nav,
-object,
-ol,
-p,
-pre,
 q,
+s,
 samp,
-section,
 small,
-span,
+strike,
 strong,
 sub,
-summary,
 sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-ul,
+tt,
 var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
 video {
   margin: 0;
   padding: 0;
   border: 0;
-  outline: 0;
   font-size: 100%;
+  font: inherit;
   vertical-align: baseline;
-  background: 0 0;
 }
 
-ins,
-mark {
-  background-color: #ff9;
-  color: #000;
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
 body {
   line-height: 1;
 }
 
-nav ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -115,38 +120,12 @@ q {
   quotes: none;
 }
 
-blockquote:after,
 blockquote:before,
-q:after,
-q:before {
-  content: '';
+blockquote:after,
+q:before,
+q:after {
+  content: "";
   content: none;
-}
-
-a {
-  margin: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: 0 0;
-}
-
-ins {
-  text-decoration: none;
-}
-
-mark {
-  font-style: italic;
-  font-weight: 700;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title],
-dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
 }
 
 table {
@@ -154,21 +133,9 @@ table {
   border-spacing: 0;
 }
 
-hr {
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-}
-
-input,
-select {
-  vertical-align: middle;
-}
-
 .header-main {
-  border: 1px solid #049470;
-  background-color: #049470;
+  border: 1px solid #579c87;
+  background-color: #579c87;
   padding: 20px;
   text-align: center;
 }
@@ -185,7 +152,7 @@ select {
 }
 
 .footer-main .link-footer {
-  background-color: #049470;
+  background-color: #579c87;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,7 +165,9 @@ select {
 .footer-main .link-footer a {
   font-size: 1.5em;
   text-decoration: none;
-  color: #f8cb00;
+  color: #fdcb46;
+  font-family: "source sans pro";
+  font-weight: 500;
 }
 
 * {
@@ -279,41 +248,74 @@ html {
 }
 
 .menu.first {
-  background-color: #ffe0d5;
-  -webkit-box-shadow: 1px 1px 10px #ffe0d5;
-          box-shadow: 1px 1px 10px #ffe0d5;
+  background-color: #fcdfdb;
+  -webkit-box-shadow: 1px 1px 10px #fcdfdb;
+          box-shadow: 1px 1px 10px #fcdfdb;
 }
 
 .menu.second {
-  background-color: #ede1e8;
-  -webkit-box-shadow: 1px 1px 10px #ede1e8;
-          box-shadow: 1px 1px 10px #ede1e8;
+  background-color: #fff5fe;
+  -webkit-box-shadow: 1px 1px 10px #fff5fe;
+          box-shadow: 1px 1px 10px #fff5fe;
 }
 
 .menu.third {
-  background-color: #cccccc;
-  -webkit-box-shadow: 1px 1px 10px #cccccc;
-          box-shadow: 1px 1px 10px #cccccc;
+  background-color: #f9f9f9;
+  -webkit-box-shadow: 1px 1px 10px #f9f9f9;
+          box-shadow: 1px 1px 10px #f9f9f9;
 }
 
 .menu.fourth {
-  background-color: #d9ecd5;
-  -webkit-box-shadow: 1px 1px 10px #d9ecd5;
-          box-shadow: 1px 1px 10px #d9ecd5;
+  background-color: #fdfffd;
+  -webkit-box-shadow: 1px 1px 10px #fdfffd;
+          box-shadow: 1px 1px 10px #fdfffd;
 }
 
 .soon {
   font-size: 1.8em;
   text-align: center;
-  color: #f8cb00;
-  background-color: #049470;
+  color: #fdcb46;
+  background-color: #579c87;
   padding: 10px;
   margin: 0 750px 90px;
   border-radius: 0.2em;
+  font-family: "caladea";
+  font-weight: bold;
 }
 
 .logo-menu1 {
   width: 50px;
   height: 50px;
+}
+
+.title-menu-first,
+.menu.first p {
+  font-family: "segoe print";
+  font-weight: bold;
+}
+
+.title-menu-second,
+.menu.second p {
+  font-family: "georgia";
+  font-weight: bold;
+}
+
+.title-menu-third {
+  font-family: "MV boli";
+  font-weight: normal;
+}
+
+.menu.third p {
+  font-family: "segoe print";
+  font-weight: normal;
+}
+
+.title-menu-fourth {
+  font-family: "segoe script";
+  font-weight: bold;
+}
+
+.menu.fourth p {
+  font-family: "segoe print";
 }
 /*# sourceMappingURL=style.css.map */
