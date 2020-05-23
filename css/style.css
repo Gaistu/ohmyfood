@@ -170,8 +170,10 @@ table {
   font-weight: 500;
 }
 
-* {
-  font-family: sans-serif;
+@font-face {
+  font-family: "Devonshire";
+  src: url("//db.onlinewebfonts.com/t/143f05526fe60a2b848f2b4fb4aa1cee.eot");
+  src: url("//db.onlinewebfonts.com/t/143f05526fe60a2b848f2b4fb4aa1cee.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/143f05526fe60a2b848f2b4fb4aa1cee.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/143f05526fe60a2b848f2b4fb4aa1cee.woff") format("woff"), url("//db.onlinewebfonts.com/t/143f05526fe60a2b848f2b4fb4aa1cee.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/143f05526fe60a2b848f2b4fb4aa1cee.svg#Devonshire") format("svg");
 }
 
 body {
@@ -201,6 +203,11 @@ html {
   position: relative;
 }
 
+.link-menu {
+  text-decoration: none;
+  color: inherit;
+}
+
 .menu-together {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -225,10 +232,10 @@ html {
           flex-direction: row;
 }
 
-.menu-together .menu.first,
-.menu-together .menu.second,
-.menu-together .menu.third,
-.menu-together .menu.fourth {
+.menu-first,
+.menu-second,
+.menu-third,
+.menu-fourth {
   width: 300px;
   height: 400px;
   display: -webkit-box;
@@ -247,25 +254,35 @@ html {
   margin: 40px;
 }
 
-.menu.first {
+.menu-first {
   background-color: #fcdfdb;
+  color: #3d1319;
   -webkit-box-shadow: 1px 1px 10px #fcdfdb;
           box-shadow: 1px 1px 10px #fcdfdb;
 }
 
-.menu.second {
+.menu-first .title-menu-first {
+  font-size: 1.5em;
+  font-family: "devonshire";
+}
+
+.menu-first .subtitle-menu-first {
+  font-family: "segoe print";
+}
+
+.menu-second {
   background-color: #fff5fe;
   -webkit-box-shadow: 1px 1px 10px #fff5fe;
           box-shadow: 1px 1px 10px #fff5fe;
 }
 
-.menu.third {
+.menu-third {
   background-color: #f9f9f9;
   -webkit-box-shadow: 1px 1px 10px #f9f9f9;
           box-shadow: 1px 1px 10px #f9f9f9;
 }
 
-.menu.fourth {
+.menu-fourth {
   background-color: #fdfffd;
   -webkit-box-shadow: 1px 1px 10px #fdfffd;
           box-shadow: 1px 1px 10px #fdfffd;
@@ -288,14 +305,7 @@ html {
   height: 50px;
 }
 
-.title-menu-first,
-.menu.first p {
-  font-family: "segoe print";
-  font-weight: bold;
-}
-
-.title-menu-second,
-.menu.second p {
+.title-menu-second {
   font-family: "georgia";
   font-weight: bold;
 }
@@ -305,8 +315,8 @@ html {
   font-weight: normal;
 }
 
-.menu.third p {
-  font-family: "segoe print";
+.menu-third p {
+  font-family: "devonshire";
   font-weight: normal;
 }
 
@@ -315,7 +325,110 @@ html {
   font-weight: bold;
 }
 
-.menu.fourth p {
+.main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fcdfdb;
+  color: #3d1319;
+  width: 80%;
+  margin: 0 auto 200px;
+}
+
+.restaurant-name {
+  font-size: 3em;
+  text-align: center;
+  padding: 50px 0 20px 0;
+}
+
+.name-low {
+  font-family: "devonshire";
+  font-size: 2.5em;
+  margin: 50px 0;
+}
+
+.name-low img {
+  width: 50px;
+  height: 50px;
+  padding-right: 10px;
+}
+
+.logo-title {
+  font-size: 3.3em;
+  font-family: "devonshire";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo-title img {
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  margin-top: 50px;
+}
+
+.category-menu {
   font-family: "segoe print";
+  font-size: 2em;
+  padding: 100px 0 50px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.category-menu img {
+  width: 350px;
+}
+
+.category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+}
+
+.liste {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5em;
+  padding-bottom: 20px;
+  font-family: "segoe print";
+}
+
+.liste p:nth-child(1) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.liste p:nth-child(2) {
+  font-weight: bold;
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
 }
 /*# sourceMappingURL=style.css.map */
