@@ -26,6 +26,11 @@ html {
   position: relative;
 }
 
+.link-menu {
+  text-decoration: none;
+  color: inherit;
+}
+
 .menu-together {
   display: flex;
   flex-direction: column;
@@ -36,45 +41,54 @@ html {
     display: flex;
     flex-direction: row;
   }
+}
+.menu-first,
+.menu-second,
+.menu-third,
+.menu-fourth {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+}
 
-  .menu.first,
-  .menu.second,
-  .menu.third,
-  .menu.fourth {
-    width: 300px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 40px;
+.menu-first {
+  background-color: $colour-menu-1;
+  color: $colour-text-menu1;
+  box-shadow: 1px 1px 10px $colour-menu-1;
+
+  .title-menu-first {
+    font-size: $font-size;
+    font-family: $font-menu1;
+  }
+
+  .subtitle-menu-first {
+    font-family: $font-subtitle-menu1;
   }
 }
 
-.menu.first {
-  background-color: $colour-menu-1;
-  box-shadow: 1px 1px 10px $colour-menu-1;
-}
-
-.menu.second {
+.menu-second {
   background-color: $colour-menu-2;
   box-shadow: 1px 1px 10px $colour-menu-2;
 }
 
-.menu.third {
+.menu-third {
   background-color: $colour-menu-3;
   box-shadow: 1px 1px 10px $colour-menu-3;
 }
 
-.menu.fourth {
+.menu-fourth {
   background-color: $colour-menu-4;
   box-shadow: 1px 1px 10px $colour-menu-4;
 }
 
 .soon {
-  font-size: 1.8em;
+  font-size: $font-size + 0.3;
   text-align: center;
-  color: $colour-text;
+  color: $colour-text-soon;
   background-color: $colour-primary;
   padding: 10px;
   margin: 0 750px 90px;
@@ -88,14 +102,7 @@ html {
   height: 50px;
 }
 
-.title-menu-first,
-.menu.first p {
-  font-family: "segoe print";
-  font-weight: bold;
-}
-
-.title-menu-second,
-.menu.second p {
+.title-menu-second {
   font-family: "georgia";
   font-weight: bold;
 }
@@ -105,8 +112,8 @@ html {
   font-weight: normal;
 }
 
-.menu.third p {
-  font-family: "segoe print";
+.menu-third p {
+  font-family: $font-menu1;
   font-weight: normal;
 }
 
@@ -115,6 +122,82 @@ html {
   font-weight: bold;
 }
 
-.menu.fourth p {
-  font-family: "segoe print";
+// menu1-2-3-4.html
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $colour-menu-1;
+  color: $colour-text-menu1;
+  width: 80%;
+  margin: 0 auto 200px;
+}
+
+.restaurant-name {
+  font-size: $font-size + 1.5;
+  text-align: center;
+  padding: 50px 0 20px 0;
+}
+
+.name-low {
+  font-family: $font-menu1;
+  font-size: $font-size + 1;
+  margin: 50px 0;
+  img {
+    width: 50px;
+    height: 50px;
+    padding-right: 10px;
+  }
+}
+
+.logo-title {
+  font-size: $font-size + 1.8;
+  font-family: $font-menu1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    margin-top: 50px;
+  }
+}
+
+.category-menu {
+  font-family: $font-category;
+  font-size: $font-size + 0.5;
+  padding: 100px 0 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    width: 350px;
+  }
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.liste {
+  display: flex;
+  font-size: $font-size;
+  padding-bottom: 20px;
+  font-family: $font-category;
+
+  p {
+    &:nth-child(1) {
+      flex: 1;
+    }
+    &:nth-child(2) {
+      font-weight: bold;
+      flex: 0;
+    }
+  }
 }
