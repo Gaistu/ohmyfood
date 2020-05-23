@@ -1,3 +1,14 @@
-* {
-    font-family: sans-serif;
+@font-face {
+  font-family: "Devonshire";
+  src: url("//db.onlinewebfonts.com/t/143f05526fe60a2b848f2b4fb4aa1cee.eot");
+  src: url("//db.onlinewebfonts.com/t/143f05526fe60a2b848f2b4fb4aa1cee.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/143f05526fe60a2b848f2b4fb4aa1cee.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/143f05526fe60a2b848f2b4fb4aa1cee.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/143f05526fe60a2b848f2b4fb4aa1cee.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/143f05526fe60a2b848f2b4fb4aa1cee.svg#Devonshire")
+      format("svg");
 }
