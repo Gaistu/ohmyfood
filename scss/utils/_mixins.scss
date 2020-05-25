@@ -11,5 +11,10 @@
   display: flex;
   font-size: $font-size;
   padding-bottom: 20px;
-  font-family: $font-category;
+}
+
+@mixin category {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 }
