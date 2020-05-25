@@ -1,0 +1,15 @@
+@mixin category-menu {
+  font-family: $font-category;
+  font-size: $font-size + 0.5;
+  padding: 100px 0 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin dish {
+  display: flex;
+  font-size: $font-size;
+  padding-bottom: 20px;
+  font-family: $font-category;
+}
