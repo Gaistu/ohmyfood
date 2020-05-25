@@ -176,6 +176,12 @@ table {
   src: url("//db.onlinewebfonts.com/t/143f05526fe60a2b848f2b4fb4aa1cee.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/143f05526fe60a2b848f2b4fb4aa1cee.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/143f05526fe60a2b848f2b4fb4aa1cee.woff") format("woff"), url("//db.onlinewebfonts.com/t/143f05526fe60a2b848f2b4fb4aa1cee.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/143f05526fe60a2b848f2b4fb4aa1cee.svg#Devonshire") format("svg");
 }
 
+@font-face {
+  font-family: "Croissant One";
+  src: url("//db.onlinewebfonts.com/t/e206a90d8abed5fa2ba8a9cdf6f18ab2.eot");
+  src: url("//db.onlinewebfonts.com/t/e206a90d8abed5fa2ba8a9cdf6f18ab2.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/e206a90d8abed5fa2ba8a9cdf6f18ab2.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/e206a90d8abed5fa2ba8a9cdf6f18ab2.woff") format("woff"), url("//db.onlinewebfonts.com/t/e206a90d8abed5fa2ba8a9cdf6f18ab2.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/e206a90d8abed5fa2ba8a9cdf6f18ab2.svg#Croissant One") format("svg");
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -257,35 +263,55 @@ html {
 .menu-first {
   background-color: #fcdfdb;
   color: #3d1319;
-  -webkit-box-shadow: 1px 1px 10px #fcdfdb;
-          box-shadow: 1px 1px 10px #fcdfdb;
+  -webkit-box-shadow: 1px 1px 10px #b4b3b3;
+          box-shadow: 1px 1px 10px #b4b3b3;
+}
+
+.menu-first .logo-menu1 {
+  width: 50px;
+  height: 50px;
 }
 
 .menu-first .title-menu-first {
   font-size: 1.5em;
   font-family: "devonshire";
+  margin: 10px 0 30px;
 }
 
 .menu-first .subtitle-menu-first {
   font-family: "segoe print";
+  font-size: 2em;
+  text-transform: uppercase;
 }
 
 .menu-second {
   background-color: #fff5fe;
-  -webkit-box-shadow: 1px 1px 10px #fff5fe;
-          box-shadow: 1px 1px 10px #fff5fe;
+  -webkit-box-shadow: 1px 1px 10px #b4b3b3;
+          box-shadow: 1px 1px 10px #b4b3b3;
+}
+
+.menu-second .title-menu-second {
+  font-family: "Croissant One";
+  font-size: 1.2em;
+  margin: 30px;
+}
+
+.menu-second .subtitle-menu-second {
+  color: #c77412;
+  font-size: 2.5em;
+  font-weight: bold;
 }
 
 .menu-third {
   background-color: #f9f9f9;
-  -webkit-box-shadow: 1px 1px 10px #f9f9f9;
-          box-shadow: 1px 1px 10px #f9f9f9;
+  -webkit-box-shadow: 1px 1px 10px #b4b3b3;
+          box-shadow: 1px 1px 10px #b4b3b3;
 }
 
 .menu-fourth {
   background-color: #fdfffd;
-  -webkit-box-shadow: 1px 1px 10px #fdfffd;
-          box-shadow: 1px 1px 10px #fdfffd;
+  -webkit-box-shadow: 1px 1px 10px #b4b3b3;
+          box-shadow: 1px 1px 10px #b4b3b3;
 }
 
 .soon {
@@ -297,16 +323,6 @@ html {
   margin: 0 750px 90px;
   border-radius: 0.2em;
   font-family: "caladea";
-  font-weight: bold;
-}
-
-.logo-menu1 {
-  width: 50px;
-  height: 50px;
-}
-
-.title-menu-second {
-  font-family: "georgia";
   font-weight: bold;
 }
 
@@ -340,6 +356,10 @@ html {
   color: #3d1319;
   width: 80%;
   margin: 0 auto 200px;
+}
+
+.main-content--bg {
+  background-color: #fff5fe;
 }
 
 .restaurant-name {
@@ -399,6 +419,21 @@ html {
   width: 350px;
 }
 
+.category-menu--start {
+  color: #c67412;
+  font-family: inherit;
+}
+
+.category-menu--main-course {
+  color: #a56799;
+  font-family: inherit;
+}
+
+.category-menu--desserts {
+  color: #6e4ccc;
+  font-family: inherit;
+}
+
 .category {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -410,7 +445,8 @@ html {
   width: 80%;
 }
 
-.liste {
+/*************** menu 1 ***************/
+.dish {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -419,16 +455,59 @@ html {
   font-family: "segoe print";
 }
 
-.liste p:nth-child(1) {
+.dish p:nth-child(1) {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.liste p:nth-child(2) {
+.dish p:nth-child(2) {
   font-weight: bold;
   -webkit-box-flex: 0;
       -ms-flex: 0;
           flex: 0;
+}
+
+/*************** menu 2 ***************/
+.second-restaurant-name {
+  font-family: "Croissant One";
+  font-size: 2.8em;
+  margin: 150px 0 50px;
+}
+
+.dish {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5em;
+  padding-bottom: 20px;
+  font-family: "segoe print";
+}
+
+.dish--start-menu2 {
+  color: #c67412;
+  font-family: inherit;
+}
+
+.dish--start-menu2 p:nth-child(2) {
+  font-weight: inherit;
+}
+
+.dish--main-menu2 {
+  color: #6e4ccc;
+  font-family: inherit;
+}
+
+.dish--main-menu2 p:nth-child(2) {
+  font-weight: inherit;
+}
+
+.dish--desserts-menu2 {
+  color: #6e4ccc;
+  font-family: inherit;
+}
+
+.dish--desserts-menu2:nth-child(3) {
+  margin-bottom: 200px;
 }
 /*# sourceMappingURL=style.css.map */
