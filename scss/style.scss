@@ -73,9 +73,10 @@ html {
   }
 
   .subtitle-menu-first {
-    font-family: $font-subtitle-menu1;
+    font-family: $font-subtitle-menu;
     font-size: $font-size + 0.5;
     text-transform: uppercase;
+    font-weight: bold;
   }
 }
 
@@ -99,11 +100,44 @@ html {
 .menu-third {
   background-color: $colour-menu-3;
   box-shadow: 1px 1px 10px rgb(180, 179, 179);
+
+  .title-menu-third {
+    font-family: $font-menu3;
+    font-size: $font-size + 0.1;
+  }
+
+  .subtitle-menu-third {
+    //color: $colour-text-menu3;
+    font-size: $font-size + 0.5;
+    font-family: $font-subtitle-menu;
+    margin-top: 35px;
+  }
 }
 
 .menu-fourth {
   background-color: $colour-menu-4;
   box-shadow: 1px 1px 10px rgb(180, 179, 179);
+
+  .title-menu-fourth {
+    font-family: $font-menu4;
+    font-size: $font-size + 0.1;
+    margin: 30px;
+  }
+
+  .subtitle-menu-fourth {
+    //color: $colour-text-menu4;
+    font-size: $font-size + 0.5;
+    font-family: $font-subtitle-menu;
+  }
+}
+
+.menu-fourth {
+  background-color: $colour-menu-4;
+  box-shadow: 1px 1px 10px rgb(180, 179, 179);
+
+  .title-menu-fourth {
+    font-family: $font-menu4;
+  }
 }
 
 .soon {
@@ -114,7 +148,7 @@ html {
   padding: 10px;
   margin: 0 750px 90px;
   border-radius: 0.2em;
-  font-family: "caladea";
+  font-family: "arial";
   font-weight: bold;
 }
 
@@ -128,11 +162,6 @@ html {
   font-weight: normal;
 }
 
-.title-menu-fourth {
-  font-family: "segoe script";
-  font-weight: bold;
-}
-
 // menu1-2-3-4.html
 
 .main-content {
@@ -143,9 +172,18 @@ html {
   color: $colour-text-menu1;
   width: 80%;
   margin: 0 auto 200px;
+  box-shadow: 1px 1px 10px rgb(180, 179, 179);
 
-  &--bg {
+  &--bg2 {
     background-color: $colour-menu-2;
+  }
+
+  &--bg3 {
+    background-color: $colour-menu-3;
+  }
+
+  &--bg4 {
+    background-color: $colour-menu-4;
   }
 }
 
@@ -205,14 +243,13 @@ html {
 }
 
 .category {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
+  @include category;
 }
 
 /*************** menu 1 ***************/
 .dish {
   @include dish;
+  font-family: $font-category;
 
   p {
     &:nth-child(1) {
@@ -237,26 +274,138 @@ html {
 
   &--start-menu2 {
     color: $colour-start-menu2;
-    font-family: inherit;
+    font-family: "Times New Roman";
     p:nth-child(2) {
-      font-weight: inherit;
+      font-weight: normal;
     }
   }
 
   &--main-menu2 {
-    color: $colour-desserts-menu2;
-    font-family: inherit;
+    color: $colour-main-course-menu2;
+    font-family: "Times New Roman";
+
     p:nth-child(2) {
-      font-weight: inherit;
+      font-weight: normal;
     }
   }
 
   &--desserts-menu2 {
     color: $colour-desserts-menu2;
-    font-family: inherit;
+    font-family: "Times New Roman";
 
     &:nth-child(3) {
       margin-bottom: 200px;
+    }
+  }
+}
+
+.category {
+  @include category;
+
+  &--menu2 {
+    .dish-p {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+    }
+  }
+}
+
+/*************** menu 3 ***************/
+
+.third-restaurant-name {
+  font-family: $font-menu3;
+  font-size: $font-size + 5.3;
+  margin: 130px 0 100px;
+}
+
+.dish {
+  @include dish;
+
+  &--start-menu3 {
+    p:nth-child(2) {
+      font-weight: normal;
+    }
+  }
+
+  &--main-menu3 {
+    p:nth-child(2) {
+      font-weight: normal;
+    }
+  }
+
+  &--desserts-menu3 {
+    p:nth-child(2) {
+      font-weight: normal;
+    }
+
+    &:nth-child(3) {
+      margin-bottom: 200px;
+    }
+  }
+}
+
+.category {
+  @include category;
+
+  &--menu3 {
+    font-family: $font-subtitle-menu;
+    color: #000;
+    .dish-p {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+    }
+  }
+}
+
+/*************** menu 4 ***************/
+
+.fourth-restaurant-name {
+  font-family: $font-menu4;
+  font-size: $font-size + 5.3;
+  margin: 130px 0 100px;
+}
+
+.dish {
+  @include dish;
+
+  &--start-menu4 {
+    p:nth-child(2) {
+      font-weight: normal;
+    }
+  }
+
+  &--main-menu4 {
+    p:nth-child(2) {
+      font-weight: normal;
+    }
+  }
+
+  &--desserts-menu4 {
+    p:nth-child(2) {
+      font-weight: normal;
+    }
+
+    &:nth-child(3) {
+      margin-bottom: 200px;
+    }
+  }
+}
+
+.category {
+  @include category;
+
+  &--menu4 {
+    font-family: $font-subtitle-menu;
+    color: #000;
+    .dish-p {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
     }
   }
 }
