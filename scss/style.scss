@@ -42,6 +42,7 @@ html {
     flex-direction: row;
   }
 }
+
 .menu-first,
 .menu-second,
 .menu-third,
@@ -58,31 +59,51 @@ html {
 .menu-first {
   background-color: $colour-menu-1;
   color: $colour-text-menu1;
-  box-shadow: 1px 1px 10px $colour-menu-1;
+  box-shadow: 1px 1px 10px rgb(180, 179, 179);
+
+  .logo-menu1 {
+    width: 50px;
+    height: 50px;
+  }
 
   .title-menu-first {
     font-size: $font-size;
     font-family: $font-menu1;
+    margin: 10px 0 30px;
   }
 
   .subtitle-menu-first {
     font-family: $font-subtitle-menu1;
+    font-size: $font-size + 0.5;
+    text-transform: uppercase;
   }
 }
 
 .menu-second {
   background-color: $colour-menu-2;
-  box-shadow: 1px 1px 10px $colour-menu-2;
+  box-shadow: 1px 1px 10px rgb(180, 179, 179);
+
+  .title-menu-second {
+    font-family: "Croissant One";
+    font-size: $font-size - 0.3;
+    margin: 30px;
+  }
+
+  .subtitle-menu-second {
+    color: $colour-text-menu2;
+    font-size: $font-size + 1;
+    font-weight: bold;
+  }
 }
 
 .menu-third {
   background-color: $colour-menu-3;
-  box-shadow: 1px 1px 10px $colour-menu-3;
+  box-shadow: 1px 1px 10px rgb(180, 179, 179);
 }
 
 .menu-fourth {
   background-color: $colour-menu-4;
-  box-shadow: 1px 1px 10px $colour-menu-4;
+  box-shadow: 1px 1px 10px rgb(180, 179, 179);
 }
 
 .soon {
@@ -94,16 +115,6 @@ html {
   margin: 0 750px 90px;
   border-radius: 0.2em;
   font-family: "caladea";
-  font-weight: bold;
-}
-
-.logo-menu1 {
-  width: 50px;
-  height: 50px;
-}
-
-.title-menu-second {
-  font-family: "georgia";
   font-weight: bold;
 }
 
@@ -132,6 +143,10 @@ html {
   color: $colour-text-menu1;
   width: 80%;
   margin: 0 auto 200px;
+
+  &--bg {
+    background-color: $colour-menu-2;
+  }
 }
 
 .restaurant-name {
@@ -167,15 +182,25 @@ html {
 }
 
 .category-menu {
-  font-family: $font-category;
-  font-size: $font-size + 0.5;
-  padding: 100px 0 50px;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
+  @include category-menu;
 
   img {
     width: 350px;
+  }
+
+  &--start {
+    color: $colour-start-menu2;
+    font-family: inherit;
+  }
+
+  &--main-course {
+    color: $colour-main-course-menu2;
+    font-family: inherit;
+  }
+
+  &--desserts {
+    color: $colour-desserts-menu2;
+    font-family: inherit;
   }
 }
 
@@ -185,11 +210,9 @@ html {
   width: 80%;
 }
 
-.liste {
-  display: flex;
-  font-size: $font-size;
-  padding-bottom: 20px;
-  font-family: $font-category;
+/*************** menu 1 ***************/
+.dish {
+  @include dish;
 
   p {
     &:nth-child(1) {
@@ -198,6 +221,42 @@ html {
     &:nth-child(2) {
       font-weight: bold;
       flex: 0;
+    }
+  }
+}
+
+/*************** menu 2 ***************/
+.second-restaurant-name {
+  font-family: "Croissant One";
+  font-size: $font-size + 1.3;
+  margin: 150px 0 50px;
+}
+
+.dish {
+  @include dish;
+
+  &--start-menu2 {
+    color: $colour-start-menu2;
+    font-family: inherit;
+    p:nth-child(2) {
+      font-weight: inherit;
+    }
+  }
+
+  &--main-menu2 {
+    color: $colour-desserts-menu2;
+    font-family: inherit;
+    p:nth-child(2) {
+      font-weight: inherit;
+    }
+  }
+
+  &--desserts-menu2 {
+    color: $colour-desserts-menu2;
+    font-family: inherit;
+
+    &:nth-child(3) {
+      margin-bottom: 200px;
     }
   }
 }
