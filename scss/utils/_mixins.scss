@@ -18,3 +18,34 @@
   flex-direction: column;
   width: 80%;
 }
+
+/*************** Mise en page des menus dans l'index.html ***************/
+@mixin layout-menu-index {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+}
+
+/*************** couleur dégradée ***************/
+@mixin gradient-text(
+  $angle: 45deg,
+  $start-color: #c67412,
+  $middle-color: #a56799,
+  $end-color: #6e4ccc,
+  $amount: 35%
+) {
+  color: $start-color;
+  background: -webkit-linear-gradient(
+    $angle,
+    $start-color,
+    $middle-color,
+    $end-color
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  display: inline-block;
+}
