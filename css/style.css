@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/*************** Mise en page des menus dans l'index.html ***************/
+/*************** couleur dégradée ***************/
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -156,10 +159,10 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 50px;
 }
 
 .footer-main .link-footer a {
@@ -250,10 +253,7 @@ html {
           flex-direction: row;
 }
 
-.menu-first,
-.menu-second,
-.menu-third,
-.menu-fourth {
+.menu-first {
   width: 300px;
   height: 400px;
   display: -webkit-box;
@@ -270,9 +270,6 @@ html {
       -ms-flex-align: center;
           align-items: center;
   margin: 40px;
-}
-
-.menu-first {
   background-color: #fcdfdb;
   color: #3d1319;
   -webkit-box-shadow: 1px 1px 10px #b4b3b3;
@@ -298,12 +295,33 @@ html {
 }
 
 .menu-second {
+  width: 300px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 40px;
   background-color: #fff5fe;
   -webkit-box-shadow: 1px 1px 10px #b4b3b3;
           box-shadow: 1px 1px 10px #b4b3b3;
 }
 
 .menu-second .title-menu-second {
+  color: #c67412;
+  background: -webkit-linear-gradient(45deg, #c67412, #a56799, #6e4ccc);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  display: inline-block;
   font-family: "Croissant One";
   font-size: 1.2em;
   margin: 30px;
@@ -316,12 +334,33 @@ html {
 }
 
 .menu-third {
+  width: 300px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 40px;
   background-color: #edefef;
   -webkit-box-shadow: 1px 1px 10px #b4b3b3;
           box-shadow: 1px 1px 10px #b4b3b3;
 }
 
 .menu-third .title-menu-third {
+  color: #0228dd;
+  background: -webkit-linear-gradient(45deg, #0228dd, #0670f3, #229df9);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  display: inline-block;
   font-family: "Dancing Script";
   font-size: 1.6em;
 }
@@ -333,12 +372,33 @@ html {
 }
 
 .menu-fourth {
+  width: 300px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 40px;
   background-color: #fdfffd;
   -webkit-box-shadow: 1px 1px 10px #b4b3b3;
           box-shadow: 1px 1px 10px #b4b3b3;
 }
 
 .menu-fourth .title-menu-fourth {
+  color: #3d923a;
+  background: -webkit-linear-gradient(45deg, #3d923a, #7cc75c, #beff7f);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  display: inline-block;
   font-family: "Kaushan Script";
   font-size: 1.6em;
   margin: 30px;
@@ -520,6 +580,11 @@ html {
 
 /*************** menu 2 ***************/
 .second-restaurant-name {
+  color: #c67412;
+  background: -webkit-linear-gradient(45deg, #c67412, #a56799, #6e4ccc);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  display: inline-block;
   font-family: "Croissant One";
   font-size: 2.8em;
   margin: 150px 0 50px;
@@ -586,6 +651,11 @@ html {
 
 /*************** menu 3 ***************/
 .third-restaurant-name {
+  color: #0228dd;
+  background: -webkit-linear-gradient(45deg, #0228dd, #0670f3, #229df9);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  display: inline-block;
   font-family: "Dancing Script";
   font-size: 6.8em;
   margin: 130px 0 100px;
@@ -646,6 +716,11 @@ html {
 
 /*************** menu 4 ***************/
 .fourth-restaurant-name {
+  color: #3d923a;
+  background: -webkit-linear-gradient(45deg, #3d923a, #7cc75c, #beff7f);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  display: inline-block;
   font-family: "Kaushan Script";
   font-size: 6.8em;
   margin: 130px 0 100px;
