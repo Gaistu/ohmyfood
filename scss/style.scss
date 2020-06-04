@@ -45,9 +45,9 @@ html {
 
 .menu-first {
   @include layout-menu-index;
+  @include box-shadow;
   background-color: $colour-menu-1;
   color: $colour-text-menu1;
-  box-shadow: 1px 1px 10px rgb(180, 179, 179);
 
   .logo-menu1 {
     width: 50px;
@@ -55,14 +55,12 @@ html {
   }
 
   .title-menu-first {
-    font-size: $font-size;
-    font-family: $font-menu1;
+    @include fonts($font-size, $font-menu1);
     margin: 10px 0 30px;
   }
 
   .subtitle-menu-first {
-    font-family: $font-subtitle-menu;
-    font-size: $font-size + 0.5;
+    @include fonts($font-size + 0.5, $font-subtitle-menu);
     text-transform: uppercase;
     font-weight: bold;
   }
@@ -70,13 +68,12 @@ html {
 
 .menu-second {
   @include layout-menu-index;
+  @include box-shadow;
   background-color: $colour-menu-2;
-  box-shadow: 1px 1px 10px rgb(180, 179, 179);
 
   .title-menu-second {
     @include gradient-text;
-    font-family: "Croissant One";
-    font-size: $font-size - 0.3;
+    @include fonts($font-size - 0.3, $font-title-menu2);
     margin: 30px;
   }
 
@@ -89,45 +86,39 @@ html {
 
 .menu-third {
   @include layout-menu-index;
+  @include box-shadow;
   background-color: $colour-menu-3;
-  box-shadow: 1px 1px 10px rgb(180, 179, 179);
 
   .title-menu-third {
     @include gradient-text(45deg, #0228dd, #0670f3, #229df9, 35%);
-    font-family: $font-menu3;
-    font-size: $font-size + 0.1;
+    @include fonts($font-size + 0.1, $font-menu3);
   }
 
   .subtitle-menu-third {
-    //color: $colour-text-menu3;
-    font-size: $font-size + 0.5;
-    font-family: $font-subtitle-menu;
+    @include fonts($font-size + 0.5, $font-subtitle-menu);
     margin-top: 35px;
   }
 }
 
 .menu-fourth {
   @include layout-menu-index;
+  @include box-shadow;
   background-color: $colour-menu-4;
-  box-shadow: 1px 1px 10px rgb(180, 179, 179);
 
   .title-menu-fourth {
-    @include gradient-text(45deg, #3d923a, #7cc75c, #beff7f, 35%);
-    font-family: $font-menu4;
-    font-size: $font-size + 0.1;
+    @include gradient-text(45deg, #3d923a, #7cc75c, #beff7f);
+    @include fonts($font-size + 0.1, $font-menu4);
     margin: 30px;
   }
 
   .subtitle-menu-fourth {
-    //color: $colour-text-menu4;
-    font-size: $font-size + 0.5;
-    font-family: $font-subtitle-menu;
+    @include fonts($font-size + 0.5, $font-subtitle-menu);
   }
 }
 
 .menu-fourth {
+  @include box-shadow;
   background-color: $colour-menu-4;
-  box-shadow: 1px 1px 10px rgb(180, 179, 179);
 
   .title-menu-fourth {
     font-family: $font-menu4;
@@ -159,6 +150,7 @@ html {
 // menu1-2-3-4.html
 
 .main-content {
+  @include box-shadow;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -166,7 +158,6 @@ html {
   color: $colour-text-menu1;
   width: 80%;
   margin: 0 auto 200px;
-  box-shadow: 1px 1px 10px rgb(180, 179, 179);
 
   &--bg2 {
     background-color: $colour-menu-2;
@@ -188,8 +179,7 @@ html {
 }
 
 .name-low {
-  font-family: $font-menu1;
-  font-size: $font-size + 1;
+  @include fonts($font-size + 1, $font-menu1);
   margin: 50px 0;
   img {
     width: 50px;
@@ -199,8 +189,7 @@ html {
 }
 
 .logo-title {
-  font-size: $font-size + 1.8;
-  font-family: $font-menu1;
+  @include fonts($font-size + 1.8, $font-menu1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -259,8 +248,7 @@ html {
 /*************** menu 2 ***************/
 .second-restaurant-name {
   @include gradient-text;
-  font-family: "Croissant One";
-  font-size: $font-size + 1.3;
+  @include fonts($font-size + 1.3, $font-title-menu2);
   margin: 150px 0 50px;
 }
 
@@ -311,31 +299,23 @@ html {
 
 .third-restaurant-name {
   @include gradient-text(45deg, #0228dd, #0670f3, #229df9, 35%);
-  font-family: $font-menu3;
-  font-size: $font-size + 5.3;
+  @include fonts($font-size + 5.3, $font-menu3);
+  padding: 10px;
   margin: 130px 0 100px;
 }
 
 .dish {
   @include dish;
 
-  &--start-menu3 {
-    p:nth-child(2) {
-      font-weight: normal;
-    }
-  }
-
-  &--main-menu3 {
+  &--start-menu3,
+  &--main-menu3,
+  &--desserts-menu3 {
     p:nth-child(2) {
       font-weight: normal;
     }
   }
 
   &--desserts-menu3 {
-    p:nth-child(2) {
-      font-weight: normal;
-    }
-
     &:nth-child(3) {
       margin-bottom: 200px;
     }
@@ -361,31 +341,23 @@ html {
 
 .fourth-restaurant-name {
   @include gradient-text(45deg, #3d923a, #7cc75c, #beff7f, 35%);
-  font-family: $font-menu4;
-  font-size: $font-size + 5.3;
-  margin: 130px 0 100px;
+  @include fonts($font-size + 5.3, $font-menu4);
+  padding: 40px;
+  margin: 130px 0 50px;
 }
 
 .dish {
   @include dish;
 
-  &--start-menu4 {
-    p:nth-child(2) {
-      font-weight: normal;
-    }
-  }
-
-  &--main-menu4 {
+  &--start-menu4,
+  &--main-menu4,
+  &--desserts-menu4 {
     p:nth-child(2) {
       font-weight: normal;
     }
   }
 
   &--desserts-menu4 {
-    p:nth-child(2) {
-      font-weight: normal;
-    }
-
     &:nth-child(3) {
       margin-bottom: 200px;
     }
