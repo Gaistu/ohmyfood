@@ -60,3 +60,36 @@
   -webkit-background-clip: text;
   display: inline-block;
 }
+
+//survol des menus
+@mixin menu-hover {
+  cursor: pointer;
+  transition: transform 400ms ease-in-out;
+  &:hover {
+    transform: scale(1.3);
+  }
+}
+
+//souslignement des menus
+@mixin underline($bg-underline) {
+  .underline-title {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 3px;
+      background: $bg-underline;
+      transform: scaleX(0);
+      transform-origin: 0 0;
+      transition: 0.5s ease-in-out;
+    }
+    &:hover {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
