@@ -162,6 +162,21 @@ table {
   padding: 20px 50px;
 }
 
+@media only screen and (max-width: 768px) {
+  .footer-main .link-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer-main .link-footer a:nth-child(2) {
+    margin-top: 5px;
+  }
+}
+
 .footer-main .link-footer a {
   font-size: 1.5em;
   text-decoration: none;
@@ -192,35 +207,6 @@ table {
   font-family: "Kaushan Script";
   src: url("//db.onlinewebfonts.com/t/51d11a72b39f33f909abddc723d66f03.eot");
   src: url("//db.onlinewebfonts.com/t/51d11a72b39f33f909abddc723d66f03.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/51d11a72b39f33f909abddc723d66f03.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/51d11a72b39f33f909abddc723d66f03.woff") format("woff"), url("//db.onlinewebfonts.com/t/51d11a72b39f33f909abddc723d66f03.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/51d11a72b39f33f909abddc723d66f03.svg#Kaushan Script") format("svg");
-}
-
-/* Extra small devices (phones, 600px and down) */
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* Medium devices (landscape tablets, 768px and up) */
-/* Large devices (laptops/desktops, 992px and up) */
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (max-width: 768px) {
-  .menu-together .menu-high {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .soon {
-    width: 70%;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
-  .link-footer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
 }
 
 body {
@@ -277,6 +263,16 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-together .menu-high,
+  .menu-together .menu-low {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .menu-hover {
@@ -480,6 +476,16 @@ html {
   font-weight: bold;
 }
 
+@media only screen and (max-width: 768px) {
+  .soon {
+    width: 70%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 120px;
+  }
+}
+
 .title-menu-third {
   font-family: "MV boli";
   font-weight: normal;
@@ -507,6 +513,12 @@ html {
   color: #3d1319;
   width: 80%;
   margin: 0 auto 200px;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-content {
+    font-size: 0.5em;
+  }
 }
 
 .main-content--bg2 {
@@ -574,8 +586,31 @@ html {
           justify-content: space-between;
 }
 
+@media only screen and (max-width: 768px) {
+  .category-menu {
+    font-family: "segoe print";
+    font-size: 1.8em;
+    padding: 100px 0 50px;
+    font-weight: bold;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: center;
+  }
+}
+
 .category-menu img {
   width: 350px;
+}
+
+@media only screen and (max-width: 768px) {
+  .category-menu img {
+    width: 80px;
+    height: 20px;
+  }
 }
 
 .category-menu--start2 {
@@ -861,6 +896,12 @@ html {
   margin: 130px 0 100px;
 }
 
+@media only screen and (max-width: 768px) {
+  .third-restaurant-name {
+    text-align: center;
+  }
+}
+
 .dish {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -921,6 +962,12 @@ html {
   font-family: "Kaushan Script";
   padding: 40px;
   margin: 130px 0 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .fourth-restaurant-name {
+    text-align: center;
+  }
 }
 
 .dish {
