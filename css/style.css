@@ -194,6 +194,35 @@ table {
   src: url("//db.onlinewebfonts.com/t/51d11a72b39f33f909abddc723d66f03.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/51d11a72b39f33f909abddc723d66f03.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/51d11a72b39f33f909abddc723d66f03.woff") format("woff"), url("//db.onlinewebfonts.com/t/51d11a72b39f33f909abddc723d66f03.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/51d11a72b39f33f909abddc723d66f03.svg#Kaushan Script") format("svg");
 }
 
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 768px) {
+  .menu-together .menu-high {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .soon {
+    width: 70%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .link-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -250,6 +279,19 @@ html {
           flex-direction: row;
 }
 
+.menu-hover {
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+}
+
+.menu-hover:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
 .menu-first {
   width: 300px;
   height: 400px;
@@ -276,6 +318,8 @@ html {
 .menu-first .logo-menu1 {
   width: 50px;
   height: 50px;
+  display: block;
+  margin: 0 auto;
 }
 
 .menu-first .title-menu-first {
@@ -289,6 +333,7 @@ html {
   font-family: "segoe print";
   text-transform: uppercase;
   font-weight: bold;
+  text-align: center;
 }
 
 .menu-second {
@@ -328,6 +373,7 @@ html {
   color: #c77412;
   font-size: 2.5em;
   font-weight: bold;
+  text-align: center;
 }
 
 .menu-third {
@@ -360,12 +406,15 @@ html {
   display: inline-block;
   font-size: 1.6em;
   font-family: "Dancing Script";
+  padding: 5px;
 }
 
 .menu-third .subtitle-menu-third {
   font-size: 2em;
   font-family: "segoe print";
+  color: #0887fb;
   margin-top: 35px;
+  text-align: center;
 }
 
 .menu-fourth {
@@ -398,12 +447,15 @@ html {
   display: inline-block;
   font-size: 1.6em;
   font-family: "Kaushan Script";
-  margin: 30px;
+  margin: 20px;
+  padding: 10px;
 }
 
 .menu-fourth .subtitle-menu-fourth {
   font-size: 2em;
   font-family: "segoe print";
+  color: #72bf56;
+  text-align: center;
 }
 
 .menu-fourth {
@@ -526,17 +578,17 @@ html {
   width: 350px;
 }
 
-.category-menu--start {
+.category-menu--start2 {
   color: #c67412;
   font-family: inherit;
 }
 
-.category-menu--main-course {
+.category-menu--main-course2 {
   color: #a56799;
   font-family: inherit;
 }
 
-.category-menu--desserts {
+.category-menu--desserts2 {
   color: #6e4ccc;
   font-family: inherit;
 }
@@ -550,6 +602,156 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 80%;
+}
+
+.category-menu--first .underline-title {
+  position: relative;
+}
+
+.category-menu--first .underline-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: #3d1319;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.category-menu--first .underline-title:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.category-menu--start2 .underline-title {
+  position: relative;
+}
+
+.category-menu--start2 .underline-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: #c67412;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.category-menu--start2 .underline-title:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.category-menu--main-course2 .underline-title {
+  position: relative;
+}
+
+.category-menu--main-course2 .underline-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: #a56799;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.category-menu--main-course2 .underline-title:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.category-menu--desserts2 .underline-title {
+  position: relative;
+}
+
+.category-menu--desserts2 .underline-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: #6e4ccc;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.category-menu--desserts2 .underline-title:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.category-menu--start3 .underline-title, .category-menu--main-course3 .underline-title, .category-menu--desserts3 .underline-title {
+  position: relative;
+}
+
+.category-menu--start3 .underline-title::after, .category-menu--main-course3 .underline-title::after, .category-menu--desserts3 .underline-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: #000000;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.category-menu--start3 .underline-title:hover::after, .category-menu--main-course3 .underline-title:hover::after, .category-menu--desserts3 .underline-title:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.category-menu--start4 .underline-title, .category-menu--main-course4 .underline-title, .category-menu--desserts4 .underline-title {
+  position: relative;
+}
+
+.category-menu--start4 .underline-title::after, .category-menu--main-course4 .underline-title::after, .category-menu--desserts4 .underline-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: #000000;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.category-menu--start4 .underline-title:hover::after, .category-menu--main-course4 .underline-title:hover::after, .category-menu--desserts4 .underline-title:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 /*************** menu 1 ***************/
@@ -688,7 +890,7 @@ html {
 
 .category--menu3 {
   font-family: "segoe print";
-  color: #000;
+  color: #000000;
 }
 
 .category--menu3 .dish-p {
@@ -702,6 +904,10 @@ html {
           flex-direction: column;
   -ms-flex-item-align: center;
       align-self: center;
+}
+
+.category .category-menu {
+  font-weight: normal;
 }
 
 /*************** menu 4 ***************/
@@ -746,7 +952,7 @@ html {
 
 .category--menu4 {
   font-family: "segoe print";
-  color: #000;
+  color: #000000;
 }
 
 .category--menu4 .dish-p {
@@ -760,5 +966,9 @@ html {
           flex-direction: column;
   -ms-flex-item-align: center;
       align-self: center;
+}
+
+.category .underline-title {
+  padding-bottom: 10px;
 }
 /*# sourceMappingURL=style.css.map */
