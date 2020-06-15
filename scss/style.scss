@@ -7,6 +7,7 @@
 @import "layout/header";
 @import "layout/footer";
 @import "base/typography";
+@import "base/responsive";
 
 body {
   display: flex;
@@ -43,6 +44,10 @@ html {
   }
 }
 
+.menu-hover {
+  @include menu-hover;
+}
+
 .menu-first {
   @include layout-menu-index;
   @include box-shadow;
@@ -52,6 +57,8 @@ html {
   .logo-menu1 {
     width: 50px;
     height: 50px;
+    display: block;
+    margin: 0 auto;
   }
 
   .title-menu-first {
@@ -63,6 +70,7 @@ html {
     @include fonts($font-size + 0.5, $font-subtitle-menu);
     text-transform: uppercase;
     font-weight: bold;
+    text-align: center;
   }
 }
 
@@ -81,6 +89,7 @@ html {
     color: $colour-text-menu2;
     font-size: $font-size + 1;
     font-weight: bold;
+    text-align: center;
   }
 }
 
@@ -92,11 +101,14 @@ html {
   .title-menu-third {
     @include gradient-text(45deg, #0228dd, #0670f3, #229df9, 35%);
     @include fonts($font-size + 0.1, $font-menu3);
+    padding: 5px;
   }
 
   .subtitle-menu-third {
     @include fonts($font-size + 0.5, $font-subtitle-menu);
+    color: $colour-text-subtitle-menu3;
     margin-top: 35px;
+    text-align: center;
   }
 }
 
@@ -108,11 +120,14 @@ html {
   .title-menu-fourth {
     @include gradient-text(45deg, #3d923a, #7cc75c, #beff7f);
     @include fonts($font-size + 0.1, $font-menu4);
-    margin: 30px;
+    margin: 20px;
+    padding: 10px;
   }
 
   .subtitle-menu-fourth {
     @include fonts($font-size + 0.5, $font-subtitle-menu);
+    color: $colour-text-subtitle-menu4;
+    text-align: center;
   }
 }
 
@@ -209,17 +224,17 @@ html {
     width: 350px;
   }
 
-  &--start {
+  &--start2 {
     color: $colour-start-menu2;
     font-family: inherit;
   }
 
-  &--main-course {
+  &--main-course2 {
     color: $colour-main-course-menu2;
     font-family: inherit;
   }
 
-  &--desserts {
+  &--desserts2 {
     color: $colour-desserts-menu2;
     font-family: inherit;
   }
@@ -227,6 +242,31 @@ html {
 
 .category {
   @include category;
+}
+
+.category-menu {
+  &--first {
+    @include underline($colour-text-menu1);
+  }
+  &--start2 {
+    @include underline($colour-start-menu2);
+  }
+  &--main-course2 {
+    @include underline($colour-main-course-menu2);
+  }
+  &--desserts2 {
+    @include underline($colour-desserts-menu2);
+  }
+  &--start3,
+  &--main-course3,
+  &--desserts3 {
+    @include underline($colour-text-menu3);
+  }
+  &--start4,
+  &--main-course4,
+  &--desserts4 {
+    @include underline($colour-text-menu3);
+  }
 }
 
 /*************** menu 1 ***************/
@@ -324,16 +364,18 @@ html {
 
 .category {
   @include category;
-
   &--menu3 {
     font-family: $font-subtitle-menu;
-    color: #000;
+    color: $colour-text-menu3;
     .dish-p {
       width: 80%;
       display: flex;
       flex-direction: column;
       align-self: center;
     }
+  }
+  .category-menu {
+    font-weight: normal;
   }
 }
 
@@ -369,12 +411,15 @@ html {
 
   &--menu4 {
     font-family: $font-subtitle-menu;
-    color: #000;
+    color: $colour-text-menu4;
     .dish-p {
       width: 80%;
       display: flex;
       flex-direction: column;
       align-self: center;
     }
+  }
+  .underline-title {
+    padding-bottom: 10px;
   }
 }
