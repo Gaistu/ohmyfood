@@ -185,6 +185,11 @@ table {
   font-weight: 500;
 }
 
+.footer-main .link-footer a:hover {
+  -webkit-animation: shake 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+          animation: shake 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
 @font-face {
   font-family: "Devonshire";
   src: url("//db.onlinewebfonts.com/t/143f05526fe60a2b848f2b4fb4aa1cee.eot");
@@ -207,6 +212,88 @@ table {
   font-family: "Kaushan Script";
   src: url("//db.onlinewebfonts.com/t/51d11a72b39f33f909abddc723d66f03.eot");
   src: url("//db.onlinewebfonts.com/t/51d11a72b39f33f909abddc723d66f03.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/51d11a72b39f33f909abddc723d66f03.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/51d11a72b39f33f909abddc723d66f03.woff") format("woff"), url("//db.onlinewebfonts.com/t/51d11a72b39f33f909abddc723d66f03.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/51d11a72b39f33f909abddc723d66f03.svg#Kaushan Script") format("svg");
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+            transform: translateX(-8px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+            transform: translateX(-8px);
+  }
+}
+
+@-webkit-keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
 }
 
 body {
@@ -486,6 +573,23 @@ html {
   }
 }
 
+.soon span:nth-child(1) {
+  -webkit-animation: blink 3s 1s infinite both;
+          animation: blink 3s 1s infinite both;
+  margin-right: 2px;
+}
+
+.soon span:nth-child(2) {
+  -webkit-animation: blink 3s 1.2s infinite both;
+          animation: blink 3s 1.2s infinite both;
+  margin-right: 2px;
+}
+
+.soon span:nth-child(3) {
+  -webkit-animation: blink 3s 1.4s infinite both;
+          animation: blink 3s 1.4s infinite both;
+}
+
 .title-menu-third {
   font-family: "MV boli";
   font-weight: normal;
@@ -739,18 +843,18 @@ html {
           transform: scaleX(1);
 }
 
-.category-menu--start3 .underline-title, .category-menu--main-course3 .underline-title, .category-menu--desserts3 .underline-title {
+.category-menu--start3 .underline-title {
   position: relative;
 }
 
-.category-menu--start3 .underline-title::after, .category-menu--main-course3 .underline-title::after, .category-menu--desserts3 .underline-title::after {
+.category-menu--start3 .underline-title::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   height: 3px;
-  background: #000000;
+  background: #0228dd;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transform-origin: 0 0;
@@ -759,23 +863,23 @@ html {
   transition: 0.5s ease-in-out;
 }
 
-.category-menu--start3 .underline-title:hover::after, .category-menu--main-course3 .underline-title:hover::after, .category-menu--desserts3 .underline-title:hover::after {
+.category-menu--start3 .underline-title:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
 
-.category-menu--start4 .underline-title, .category-menu--main-course4 .underline-title, .category-menu--desserts4 .underline-title {
+.category-menu--main-course3 .underline-title {
   position: relative;
 }
 
-.category-menu--start4 .underline-title::after, .category-menu--main-course4 .underline-title::after, .category-menu--desserts4 .underline-title::after {
+.category-menu--main-course3 .underline-title::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   height: 3px;
-  background: #000000;
+  background: #0670f3;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transform-origin: 0 0;
@@ -784,7 +888,107 @@ html {
   transition: 0.5s ease-in-out;
 }
 
-.category-menu--start4 .underline-title:hover::after, .category-menu--main-course4 .underline-title:hover::after, .category-menu--desserts4 .underline-title:hover::after {
+.category-menu--main-course3 .underline-title:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.category-menu--desserts3 .underline-title {
+  position: relative;
+}
+
+.category-menu--desserts3 .underline-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: #229df9;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.category-menu--desserts3 .underline-title:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.category-menu--start4 .underline-title {
+  position: relative;
+}
+
+.category-menu--start4 .underline-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: #3d923a;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.category-menu--start4 .underline-title:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.category-menu--main-course4 .underline-title {
+  position: relative;
+}
+
+.category-menu--main-course4 .underline-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: #7cc75c;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.category-menu--main-course4 .underline-title:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.category-menu--desserts4 .underline-title {
+  position: relative;
+}
+
+.category-menu--desserts4 .underline-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: #beff7f;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.category-menu--desserts4 .underline-title:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
