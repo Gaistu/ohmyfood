@@ -7,6 +7,7 @@
 @import "layout/header";
 @import "layout/footer";
 @import "base/typography";
+@import "base/animation";
 
 body {
   display: flex;
@@ -159,6 +160,19 @@ html {
     align-self: center;
     margin-bottom: 120px;
   }
+  span {
+    &:nth-child(1) {
+      animation: blink 3s 1s infinite both;
+      margin-right: 2px;
+    }
+    &:nth-child(2) {
+      animation: blink 3s 1.2s infinite both;
+      margin-right: 2px;
+    }
+    &:nth-child(3) {
+      animation: blink 3s 1.4s infinite both;
+    }
+  }
 }
 
 .title-menu-third {
@@ -279,15 +293,23 @@ html {
   &--desserts2 {
     @include underline($colour-desserts-menu2);
   }
-  &--start3,
-  &--main-course3,
-  &--desserts3 {
-    @include underline($colour-text-menu3);
+  &--start3 {
+    @include underline($colour-underline-start-menu3);
   }
-  &--start4,
-  &--main-course4,
+  &--main-course3 {
+    @include underline($colour-underline-main-menu3);
+  }
+  &--desserts3 {
+    @include underline($colour-underline-desserts-menu3);
+  }
+  &--start4 {
+    @include underline($colour-underline-start-menu4);
+  }
+  &--main-course4 {
+    @include underline($colour-underline-main-menu4);
+  }
   &--desserts4 {
-    @include underline($colour-text-menu3);
+    @include underline($colour-underline-desserts-menu4);
   }
 }
 
