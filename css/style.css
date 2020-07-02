@@ -151,6 +151,13 @@ table {
   width: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+  .footer-main {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
 .footer-main .link-footer {
   background-color: #579c87;
   display: -webkit-box;
@@ -363,7 +370,6 @@ html {
 }
 
 .menu-hover {
-  cursor: pointer;
   -webkit-transition: -webkit-transform 400ms ease-in-out;
   transition: -webkit-transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out;
@@ -565,11 +571,10 @@ html {
 
 @media only screen and (max-width: 768px) {
   .soon {
-    width: 70%;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    margin-bottom: 120px;
+    margin: 60px 100px 50px 100px;
   }
 }
 
