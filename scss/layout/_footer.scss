@@ -2,6 +2,9 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  @media only screen and (max-width: 768px) {
+    position: sticky;
+  }
 
   .link-footer {
     background-color: $colour-primary;
