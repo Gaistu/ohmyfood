@@ -156,9 +156,8 @@ html {
   font-weight: bold;
 
   @media only screen and (max-width: 768px) {
-    width: 70%;
     align-self: center;
-    margin-bottom: 120px;
+    margin: 60px 100px 50px 100px;
   }
   span {
     &:nth-child(1) {
