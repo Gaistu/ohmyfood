@@ -1308,6 +1308,12 @@ html {
   margin-bottom: 100px;
 }
 
+@media only screen and (max-width: 992px) {
+  .legal-p:last-child {
+    margin-bottom: 150px;
+  }
+}
+
 .legal-h1 {
   font-size: 3em;
   margin: 40px;
@@ -1330,5 +1336,11 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media only screen and (max-width: 768px) {
+  .legal-main {
+    font-size: 0.75em;
+  }
 }
 /*# sourceMappingURL=style.css.map */
