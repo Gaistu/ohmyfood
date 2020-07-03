@@ -45,6 +45,9 @@ html {
     @media only screen and (max-width: 768px) {
       flex-direction: column;
     }
+    @media only screen and (max-width: 992px) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -154,6 +157,9 @@ html {
   border-radius: 0.2em;
   font-family: "arial";
   font-weight: bold;
+  @media only screen and (max-width: 992px) {
+    margin: 50px 150px 130px;
+  }
 
   @media only screen and (max-width: 768px) {
     align-self: center;
@@ -254,8 +260,17 @@ html {
     text-align: center;
   }
 
+  @media only screen and (max-width: 992px) {
+    text-align: center;
+  }
+
   img {
     width: 350px;
+    @media only screen and (max-width: 992px) {
+      width: 140px;
+      height: 30px;
+    }
+
     @media only screen and (max-width: 768px) {
       width: 80px;
       height: 20px;
@@ -392,6 +407,10 @@ html {
   @media only screen and (max-width: 768px) {
     text-align: center;
   }
+
+  @media only screen and (max-width: 992px) {
+    text-align: center;
+  }
 }
 
 .dish {
@@ -440,6 +459,10 @@ html {
   @media only screen and (max-width: 768px) {
     text-align: center;
   }
+
+  @media only screen and (max-width: 992px) {
+    text-align: center;
+  }
 }
 
 .dish {
@@ -476,4 +499,32 @@ html {
   .underline-title {
     padding-bottom: 10px;
   }
+}
+
+/********** Legal Notices **********/
+.legal-p {
+  text-align: justify;
+  font-size: $font-size * 1.1;
+  margin-bottom: 50px;
+  &:last-child {
+    margin-bottom: 100px;
+  }
+}
+
+.legal-h1 {
+  font-size: $font-size * 2;
+  margin: 40px;
+}
+
+.legal-h2 {
+  font-size: $font-size * 1.5;
+  margin-bottom: 20px;
+}
+
+.legal-main {
+  width: 60%;
+  display: flex;
+  text-align: center;
+  align-self: center;
+  flex-direction: column;
 }
