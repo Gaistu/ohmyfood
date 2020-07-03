@@ -157,8 +157,13 @@ html {
   border-radius: 0.2em;
   font-family: "arial";
   font-weight: bold;
+
+  @media only screen and (max-width: 1200px) {
+    margin: 50px 400px 130px;
+  }
+
   @media only screen and (max-width: 992px) {
-    margin: 50px 150px 130px;
+    margin: 50px 300px 130px;
   }
 
   @media only screen and (max-width: 768px) {
